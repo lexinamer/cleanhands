@@ -45,6 +45,7 @@ if ( ! function_exists( 'cleanhands_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
 			'menu-1' => esc_html__( 'Primary', 'cleanhands' ),
+			'menu-2' => esc_html__( 'Top Nav', 'cleanhands' ),
 		) );
 
 		/*
@@ -132,6 +133,13 @@ function cleanhands_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'cleanhands_scripts' );
 
+// Add Google Fonts
+function add_google_fonts() {
+	wp_enqueue_style( 'wpb-google-fonts', 'https://fonts.googleapis.com/css?family=Khula:300,400,600,700,800', false );
+	}
+
+add_action( 'wp_enqueue_scripts', 'add_google_fonts' );
+
 /**
  * Implement the Custom Header feature.
  */
@@ -158,4 +166,3 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
-
