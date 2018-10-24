@@ -1,0 +1,81 @@
+/*
+  PPG : ADMIN STYLE
+*/
+
+.ppg_table {
+    background-color: #fff;
+    border: 2px solid #000;
+    box-sizing: content-box;
+    font-size: 13px;
+    margin-top: 26px;
+    width: 97%;
+}
+
+.ppg_table th {
+    background: #23282d none repeat scroll 0 0;
+    border: medium none;
+    color: #fff;
+    font-size: 14px;
+    padding: 12px;
+    text-align: left;
+    text-shadow: 0 1px 2px #555555;
+}
+
+.ppg_table td {
+   padding: 6px;
+}
+
+.ppg_table .notemsg td{
+	color: #878383;
+}
+
+tr.heading td {
+    font-size: 15px;
+    padding-left: 12px;
+}
+
+.notemsg td ul{
+	margin:0 !important;
+}
+
+.ppg_table .ppg_keyword,
+.ppg_table .ppg_keyword textarea{
+	width: 100%;
+}
+
+.ppg_keyword td{
+	padding-left:0;
+}
+
+.ppg_keyword span{
+	color:#A0A0A0;
+}
+
+
+.ppg_table .ppg_button,
+.ppg_table .ppg_ubutton{
+    background: #0073aa none repeat scroll 0 0;
+    border-radius: 20px;
+    border-style: none;
+    color: #ffffff;
+    padding: 12px 22px;
+	display:inline-block;
+	cursor:pointer;
+}
+
+.ppg_table .ppg_ubutton{
+	display:none;
+}
+
+.ppg_loader {
+    background: rgba(0, 0, 0, 0) url("../images/ajax-loader.gif") no-repeat scroll 0 0;
+    display: none;
+    height: 16px;
+    margin-left: 11px;
+	display:none;
+    width: 16px;
+}
+
+.ppg_table input[type="text"]{
+	width:99%;
+}
