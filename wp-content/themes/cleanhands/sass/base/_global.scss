@@ -1,0 +1,14 @@
+body {
+  font-family: $font-body;
+  font-size: 18px;
+}
+
+.container {
+  max-width: 1260px;
+  margin: 0 auto;
+  margin-bottom: 3em;
+
+  @media #{$small-and-down} {
+    margin: 0 20px;
+  }
+}
