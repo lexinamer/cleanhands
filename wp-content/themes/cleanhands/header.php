@@ -33,22 +33,33 @@
 	url('<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>');">
 
 	<?php else: ?>
+
 	<header class="site-header">
+	<? endif ?>
+
+		<nav class="top-navigation">
+			<?php
+				wp_nav_menu( array(
+					'theme_location' => 'menu-2',
+					'menu_id'        => 'top-nav',
+				) );
+			?>
+		</nav>
 
 		<div class="nav-items">
 			<div class="site-branding">
 				<?php
-				the_custom_logo();
+					the_custom_logo();
 				?>
 			</div>
 
 			<nav id="site-navigation" class="main-navigation">
 				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'land-for-tomorrow' ); ?></button>
 				<?php
-				wp_nav_menu( array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				) );
+					wp_nav_menu( array(
+						'theme_location' => 'menu-1',
+						'menu_id'        => 'primary-menu',
+					) );
 				?>
 			</nav>
 		</div>
