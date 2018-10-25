@@ -45,7 +45,7 @@ if ( ! function_exists( 'cleanhands_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
 			'menu-1' => esc_html__( 'Primary', 'cleanhands' ),
-			'menu-2' => esc_html__( 'Top Nav', 'cleanhands' ),
+			'menu-2' => esc_html__( 'Top Nav', 'nclfc' ),
 		) );
 
 		/*
