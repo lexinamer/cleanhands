@@ -14,9 +14,7 @@
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 		<?php the_subtitle('<h3>', '</h3>'); ?>
 	</header><!-- .entry-header -->
-
-	<?php cleanhands_post_thumbnail(); ?>
-
+	
 	<div class="entry-content">
 		<?php
 		the_content();
