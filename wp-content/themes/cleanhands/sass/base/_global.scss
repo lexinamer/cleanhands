@@ -1,6 +1,7 @@
 body {
-  font-family: 'Khula', sans-serif;
+  font-family: $font;
   font-size: 18px;
+  background: $color-white;
 }
 
 .container {
@@ -11,4 +12,9 @@ body {
   @media #{$small-and-down} {
     margin: 0 20px;
   }
+}
+
+nav ul {
+  padding-left: 0;
+  margin: 0;
 }
