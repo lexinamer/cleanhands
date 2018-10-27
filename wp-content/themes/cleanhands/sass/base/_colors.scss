@@ -1,7 +1,8 @@
 $color-yellow: #FFC601;
-$color-light-blue: #1B5AD5;
-$color-blue: #1851C1;
 $color-dark-blue: #0B2964;
-$color-white: #FEFCFC;
-$color-teal: #16B99C;
+$color-blue: lighten($color-dark-blue, 13%);
+$color-light-blue: lighten($color-dark-blue, 25%);
+$color-teal: #1AE4C0;
+$color-teal-dark: darken($color-teal, 25%);
 $color-black: #242323;
+$color-white: #FEFCFC;

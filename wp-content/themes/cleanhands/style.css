@@ -285,29 +285,29 @@ template {
 }
 h1 {
   color: #0b2964;
-  font-size: 40px;
+  font-size: 35px;
   font-weight: 800;
   text-transform: uppercase;
 }
 h2 {
-  color: #1851c1;
-  font-size: 35px;
+  color: #1241a0;
+  font-size: 30px;
   font-weight: 600;
   text-transform: uppercase;
 }
 h3 {
-  color: #1851c1;
-  font-size: 30px;
+  color: #1241a0;
+  font-size: 27px;
   font-weight: 600;
 }
 h4 {
-  color: #1b5ad5;
-  font-size: 25px;
+  color: #1858d7;
+  font-size: 20px;
   font-weight: 400;
 }
 p {
-  color: #1851c1;
-  font-size: 18px;
+  color: #1241a0;
+  font-size: 16px;
   font-weight: 400;
 }
 body {
@@ -366,6 +366,26 @@ nav ul {
 #content[tabindex="-1"]:focus {
   outline: 0;
 }
+.btn {
+  background: #1ae4c0;
+  color: #fefcfc;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 20px;
+  text-decoration: none;
+  padding: 12px 10px 8px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  display: table;
+  text-align: center;
+  min-width: 225px;
+  clip-path: polygon(4% 0%, 100% 0%, 96% 100%, 0% 100%);
+  -webkit-clip-path: polygon(4% 0%, 100% 0%, 96% 100%, 0% 100%);
+  margin-top: 1em;
+  transition: background 0.5s;
+}
+.btn:hover {
+  background: #0d7260;
+}
 .top-navigation {
   position: absolute;
   right: 4em;
@@ -421,6 +441,7 @@ nav ul {
   }
 }
 .site-header {
+  position: relative;
   border-top: 6px solid #ffc601;
   background-position: center;
   background-size: cover;
@@ -430,4 +451,18 @@ nav ul {
 }
 .site-header-landing {
   height: 70vh;
+}
+.page-header {
+  padding: 1em 2em;
+  position: absolute;
+  bottom: 3em;
+  width: 55%;
+  right: 0;
+  background: rgba(255, 198, 1, .9);
+}
+.page-header h1, .page-header h3 {
+  display: inline;
+}
+.home .entry-header h1 {
+  text-transform: lowercase;
 }

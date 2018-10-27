@@ -65,6 +65,18 @@
 				</nav>
 			</div>
 		</div>
+
+		<?php if( is_page() ): ?>
+			<header class="page-header">
+				<?php the_title( '<h1 >', '</h1>' ); ?>
+				<?php the_subtitle('<h3>', '</h3>'); ?>
+
+				<?php if ( is_front_page() ): ?>
+					<a href="donate" class="btn">Donate Now</a>
+				<?php endif ?>
+			</header><!-- .page-header -->
+		<?php endif ?>
+
 	</header>
 
 	<div id="content" class="site-content">

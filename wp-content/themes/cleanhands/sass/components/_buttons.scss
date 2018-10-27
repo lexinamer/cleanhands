@@ -1,0 +1,21 @@
+.btn {
+  background: $color-teal;
+  color: $color-white;
+  text-transform: uppercase;
+  font-weight: $fontweight-bold;
+  font-size: 20px;
+  text-decoration: none;
+  padding: 12px 10px 8px;
+  box-shadow: $box-shadow;
+  display: table;
+  text-align: center;
+  min-width: 225px;
+  clip-path: polygon(4% 0%, 100% 0%, 96% 100%, 0% 100%);
+  -webkit-clip-path: polygon(4% 0%, 100% 0%, 96% 100%, 0% 100%);
+  margin-top: 1em;
+  transition: background .5s;
+
+  &:hover {
+    background: $color-teal-dark;
+  }
+}

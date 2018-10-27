@@ -1,23 +1,8 @@
 .site-header {
+  position: relative;
   border-top: 6px solid $color-yellow;
   background-position: center;
   background-size: cover;
-
-  // .nav-items {
-  //   display: flex;
-  //   justify-content: space-between;
-  //   align-items: center;
-  //   padding: 2em 6em;
-  //
-  //   .custom-logo {
-  //     width: 150px;
-  //     height: 150px;
-  //   }
-  //
-  //   @media #{$large-and-down} {
-  //     padding: 1em;
-  //   }
-  // }
 
   &-home {
     height: 100vh;
@@ -25,5 +10,24 @@
 
   &-landing {
     height: 70vh;
+  }
+}
+
+.page-header {
+  padding: 1em 2em;
+  position: absolute;
+  bottom: 3em;
+  width: 55%;
+  right: 0;
+  background: rgba($color-yellow, .9);
+
+  h1, h3 {
+    display: inline;
+  }
+}
+
+.home {
+  .entry-header h1 {
+    text-transform: lowercase;
   }
 }
