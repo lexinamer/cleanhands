@@ -17,5 +17,7 @@
 
   &:hover {
     background: $color-teal-dark;
+    color: $color-white;
+    box-shadow: none;
   }
 }

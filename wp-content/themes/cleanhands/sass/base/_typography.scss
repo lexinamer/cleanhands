@@ -29,3 +29,14 @@ p {
   font-size: 16px;
   font-weight: $fontweight-regular;
 }
+
+a {
+  color: $color-teal;
+  text-decoration: none;
+  transition: all .3s;
+
+  &:hover {
+    color: $color-teal-dark;
+    // box-shadow: inset 0 -3px 0 $color-teal-dark;
+  }
+}

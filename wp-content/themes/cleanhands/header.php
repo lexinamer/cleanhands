@@ -29,7 +29,7 @@
 		url('<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>');">
 
 	<?php elseif ( is_page_template('page-landing.php') ): ?>
-	<header class="site-header site-header-landing" style="background-image:
+		<header class="site-header site-header-landing" style="background-image:
 	url('<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>');">
 
 	<?php else: ?>

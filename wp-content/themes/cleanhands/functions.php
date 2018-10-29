@@ -111,8 +111,58 @@ function cleanhands_widgets_init() {
 		'description'   => esc_html__( 'Add widgets here.', 'cleanhands' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+
+	register_sidebar( array(
+		'name'          => esc_html__( 'Footer 1', 'cleanhands' ),
+		'id'            => 'footer-1',
+		'description'   => esc_html__( 'Add widgets here.', 'cleanhands' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+
+	register_sidebar( array(
+		'name'          => esc_html__( 'Footer 2', 'cleanhands' ),
+		'id'            => 'footer-2',
+		'description'   => esc_html__( 'Add widgets here.', 'cleanhands' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+
+	register_sidebar( array(
+		'name'          => esc_html__( 'Footer 3', 'cleanhands' ),
+		'id'            => 'footer-3',
+		'description'   => esc_html__( 'Add widgets here.', 'cleanhands' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+
+	register_sidebar( array(
+		'name'          => esc_html__( 'Footer 4', 'cleanhands' ),
+		'id'            => 'Footer-4',
+		'description'   => esc_html__( 'Add widgets here.', 'cleanhands' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+
+	register_sidebar( array(
+		'name'          => esc_html__( 'Footer 5', 'cleanhands' ),
+		'id'            => 'footer-5',
+		'description'   => esc_html__( 'Add widgets here.', 'cleanhands' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
 	) );
 }
 add_action( 'widgets_init', 'cleanhands_widgets_init' );

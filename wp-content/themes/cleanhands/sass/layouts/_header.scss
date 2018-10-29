@@ -22,12 +22,20 @@
   background: rgba($color-yellow, .9);
 
   h1, h3 {
-    display: inline;
+    display: inline-block;
+    vertical-align: middle;
   }
 }
 
 .home {
-  .entry-header h1 {
-    text-transform: lowercase;
+  .page-header {
+    h1 {
+      display: inline;
+      text-transform: lowercase;
+    }
+
+    h3 {
+      display: inline;
+    }
   }
 }

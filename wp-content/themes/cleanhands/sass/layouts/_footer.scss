@@ -1,0 +1,43 @@
+.site-footer {
+  padding: 1em 4em;
+  border-bottom: 10px solid $color-yellow;
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: space-between;
+
+  .footer-col {
+    // flex: 1;
+
+    .widget-title {
+      margin: 5px 0;
+      padding: 0;
+    }
+
+    ul {
+      padding-left: 2px;
+      margin: 0;
+
+      li {
+        list-style-type: none;
+        line-height: 1.5em;
+      }
+    }
+
+    &-last {
+      width: 30%;
+      text-align: right;
+
+      a {
+        @extend h3;
+        line-height: 2em;
+
+        &:hover {
+          color: $color-blue;
+          box-shadow: inset 0 -4px 0 $color-blue;
+        }
+      }
+    }
+  }
+}

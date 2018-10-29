@@ -12,23 +12,35 @@
 ?>
 
 	</div><!-- #content -->
-
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'cleanhands' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'cleanhands' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'cleanhands' ), 'cleanhands', '<a href="http://www.lexinamer.com">Lexi Namer</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
 </div><!-- #page -->
+
+<footer class="site-footer">
+	<div class="footer-nav">
+		<div class="footer-col">
+			<?php dynamic_sidebar('footer-1'); ?>
+		</div>
+
+		<div class="footer-col">
+			<?php dynamic_sidebar('footer-2'); ?>
+		</div>
+
+		<div class="footer-col">
+			<?php dynamic_sidebar('footer-3'); ?>
+		</div>
+
+		<div class="footer-col">
+			<?php dynamic_sidebar('footer-4'); ?>
+		</div>
+
+		<div class="footer-col footer-col-last">
+			<?php dynamic_sidebar('footer-5'); ?>
+		</div>
+	</div><!-- #colophon -->
+
+	<div class="footer-info">
+		Copyright 2018 <?php bloginfo('name'); ?>. All rights reserved.
+	</div><!-- .site-info -->
+</footer>
 
 <?php wp_footer(); ?>
 
