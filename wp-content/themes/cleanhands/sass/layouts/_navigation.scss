@@ -53,23 +53,30 @@
 	display: block;
 }
 
-@media screen and (min-width: 37.5em) {
-	.menu-toggle {
-		display: none;
+.menu-toggle {
+	display: none;
+}
+
+.main-navigation ul {
+	display: block;
+
+	a {
+		margin-left: 1.5em;
+		color: $color-dark-blue;
+		text-decoration: none;
+		font-weight: $fontweight-semibold;
+
+		&:hover {
+			color: $color-blue;
+			box-shadow: inset 0 -4px 0 $color-blue;
+		}
 	}
-	.main-navigation ul {
-		display: block;
 
+	.current-menu-item {
 		a {
-			margin-left: 1.5em;
-			color: $color-dark-blue;
-			text-decoration: none;
-			font-weight: $fontweight-semibold;
-
-			&:hover {
-				color: $color-blue;
-				box-shadow: inset 0 -4px 0 $color-blue;
-			}
+			background: $color-teal;
+			color: $color-white;
+			padding: 10px;
 		}
 	}
 }
