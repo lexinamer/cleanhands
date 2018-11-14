@@ -15,7 +15,7 @@
 </div><!-- #page -->
 
 <footer class="site-footer">
-	<div class="footer-nav">
+	<div class="footer-nav container">
 		<div class="footer-col">
 			<?php dynamic_sidebar('footer-1'); ?>
 		</div>
@@ -37,8 +37,22 @@
 		</div>
 	</div><!-- #colophon -->
 
-	<div class="footer-info">
-		Copyright 2018 <?php bloginfo('name'); ?>. All rights reserved.
+	<div class="footer-info container">
+		<div>
+			<?php
+				wp_nav_menu( array(
+					'theme_location' => 'menu-3',
+					'menu_id'        => 'social-menu',
+				) );
+			?>
+
+			<p>Copyright 2018. Clean Hands for Haiti is a partnership with A&M Sports Organization. We are a 501(c)3 organization.</p>
+		</div>
+
+		<div>
+			<a href="/privacy-policy">Privacy Policy</a> |
+			<a href="#">Get our Emails</a>
+		</div>
 	</div><!-- .site-info -->
 </footer>
 

@@ -45,7 +45,8 @@ if ( ! function_exists( 'cleanhands_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
 			'menu-1' => esc_html__( 'Primary', 'cleanhands' ),
-			'menu-2' => esc_html__( 'Top Nav', 'nclfc' ),
+			'menu-2' => esc_html__( 'Top Nav', 'cleanhands' ),
+			'menu-3' => esc_html__( 'Social Menu', 'cleanhands' ),
 		) );
 
 		/*
@@ -68,6 +69,9 @@ if ( ! function_exists( 'cleanhands_setup' ) ) :
 
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
+
+		// Add theme support for Gutenberg wide
+		add_theme_support( 'align-wide' );
 
 		/**
 		 * Add support for core custom logo.
@@ -175,6 +179,8 @@ function cleanhands_scripts() {
 
 	wp_enqueue_script( 'cleanhands-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
+	wp_enqueue_script( 'cleanhands-scripts', get_template_directory_uri() . '/js/custom-scripts.js', array(), '20151215', true );
+
 	wp_enqueue_script( 'cleanhands-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -182,13 +188,6 @@ function cleanhands_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'cleanhands_scripts' );
-
-// Add Google Fonts
-function add_google_fonts() {
-	wp_enqueue_style( 'wpb-google-fonts', 'https://fonts.googleapis.com/css?family=Khula:300,400,600,700,800', false );
-	}
-
-add_action( 'wp_enqueue_scripts', 'add_google_fonts' );
 
 /**
  * Implement the Custom Header feature.
@@ -216,3 +215,83 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+
+/**
+ * CUSTOM FUNCTIONS
+ */
+
+// Add Google Fonts
+function add_google_fonts() {
+	wp_enqueue_style( 'wpb-google-fonts', 'https://fonts.googleapis.com/css?family=Khula:300,400,600,700,800', false );
+	}
+
+add_action( 'wp_enqueue_scripts', 'add_google_fonts' );
+
+// Add Font Awesome
+function add_font_awesome() {
+	wp_enqueue_style( 'add-font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css' );
+}
+
+add_action( 'wp_enqueue_scripts', 'add_font_awesome' );
+
+
+// Adding custom classes to pages
+function default_body_class( $classes ) {
+    if( is_page() && !is_page_template() && !is_front_page() )
+      $classes[] = 'default';
+    	return $classes;
+}
+add_filter( 'body_class', 'default_body_class' );
+
+function landing_body_class( $classes ) {
+    if( is_page_template('page-landing.php') )
+      $classes[] = 'landing';
+    	return $classes;
+}
+add_filter( 'body_class', 'landing_body_class' );
+
+
+// Custom post type for trips
+function our_trips() {
+	$labels = array(
+		'name' => _x("Our Trips", "post type general name"),
+		'singular_name' => _x("Trip", "post type singular name"),
+		'menu_name' => 'Our Trips',
+		'add_new' => _x("Add New", "item"),
+		'add_new_item' => __("Add New Trip"),
+		'edit_item' => __("Edit Trip"),
+		'new_item' => __("New Trip"),
+		'view_item' => __("View Trip"),
+		'parent_item_colon' => ''
+	);
+
+	register_post_type('our_trips' , array(
+		'labels' => $labels,
+		'public' => true,
+		'has_archive' => false,
+		'menu_icon' => 'dashicons-welcome-write-blog',
+		'rewrite' => array('slug' => 'our-trips'),
+		'supports' => array('title', 'editor', 'thumbnail', 'excerpt')
+	) );
+}
+
+add_action( 'init', __NAMESPACE__.'\\our_trips' );
+
+//Add color presets for Beaver Builder
+function bb_color_presets($colors) {
+    $colors = array();
+      $colors[] = 'FFC601';
+      $colors[] = '1851C1';
+      $colors[] = '0B2964';
+      $colors[] = '05CEAA';
+      $colors[] = 'A2DBE3';
+      $colors[] = 'FF3B3F';
+			$colors[] = '4CCB14';
+			$colors[] = 'C6ED17';
+			$colors[] = 'FEFCFC';
+			$colors[] = 'A9A9A9';
+			$colors[] = '242323';
+    return $colors;
+}
+add_filter( 'fl_builder_color_presets', 'bb_color_presets' );

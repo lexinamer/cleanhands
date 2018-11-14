@@ -1,8 +1,18 @@
+// Primary Colors
 $color-yellow: #FFC601;
+$color-blue: #1851C1;
 $color-dark-blue: #0B2964;
-$color-blue: lighten($color-dark-blue, 13%);
-$color-light-blue: lighten($color-dark-blue, 25%);
-$color-teal: #1AE4C0;
-$color-teal-dark: darken($color-teal, 25%);
-$color-black: #242323;
+
+// Accent Colors
+$color-teal: #05CEAA;
+
+// Secondary Colors
+$color-sky: #A2DBE3;
+$color-salmon: #FF3B3F;
+$color-green: #4CCB14;
+$color-lime: #c6ed17;
+
+// Neutrals
 $color-white: #FEFCFC;
+$color-grey: #A9A9A9;
+$color-black: #242323;

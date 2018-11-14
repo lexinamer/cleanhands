@@ -28,16 +28,23 @@
 		<header class="site-header site-header-home" style="background-image:
 		url('<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>');">
 
-	<?php elseif ( is_page_template('page-landing.php') ): ?>
+	<?php elseif ( is_page() && !is_page_template() ): ?>
+		<header class="site-header">
+
+	<?php else: ?>
 		<header class="site-header site-header-landing" style="background-image:
 	url('<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>');">
 
-	<?php else: ?>
-
-	<header class="site-header">
 	<? endif ?>
 
 		<nav class="top-navigation">
+			<?php
+				wp_nav_menu( array(
+					'theme_location' => 'menu-3',
+					'menu_id'        => 'social-menu',
+				) );
+			?>
+
 			<?php
 				wp_nav_menu( array(
 					'theme_location' => 'menu-2',
@@ -47,7 +54,7 @@
 		</nav>
 
 		<div class="nav-container">
-			<div class="nav-items">
+			<div class="nav-items container">
 				<div class="site-branding">
 					<?php
 						the_custom_logo();
@@ -67,8 +74,14 @@
 		</div>
 
 		<?php if( is_page() ): ?>
+
+			<?php if( is_page() && !is_page_template() && !is_front_page() )
+				if ( function_exists('yoast_breadcrumb') ) {
+					yoast_breadcrumb('<p id="breadcrumbs">','</p>');
+			} ?>
+
 			<header class="page-header">
-				<?php the_title( '<h1 >', '</h1>' ); ?>
+				<?php the_title( '<h1 >', '. </h1>' ); ?>
 				<?php the_subtitle('<h3>', '</h3>'); ?>
 
 				<?php if ( is_front_page() ): ?>

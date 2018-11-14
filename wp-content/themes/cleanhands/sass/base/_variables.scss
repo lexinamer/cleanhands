@@ -1,4 +1,5 @@
-$small-and-down: "only screen and (max-width : 767px)";
+$small-and-down: "only screen and (max-width : 800px)";
+$medium-and-down: "only screen and (max-width : 1050px)";
 $large-and-down: "only screen and (max-width : 1200px)";
 
 $font: 'Khula', sans-serif;
@@ -9,4 +10,6 @@ $fontweight-semibold: 600;
 $fontweight-bold: 700;
 $fontweight-extrabold: 800;
 
-$box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+// $box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+$box-shadow: 2px 2px 8px 2px rgba(0,0,0,0.2);
+// $box-shadow: 0 4px 18px 1px rgba(0,0,0,.2);

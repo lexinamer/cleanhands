@@ -14,28 +14,33 @@
 }
 
 .page-header {
-  padding: 1em 2em;
+  padding: 1.4em 2em .7em 2em;
   position: absolute;
   bottom: 3em;
   width: 55%;
   right: 0;
   background: rgba($color-yellow, .9);
+  box-shadow: $box-shadow;
 
   h1, h3 {
-    display: inline-block;
-    vertical-align: middle;
+    display: inline;
   }
 }
 
-.home {
+.landing {
   .page-header {
-    h1 {
-      display: inline;
-      text-transform: lowercase;
-    }
+    width: 47%;
+  }
+}
 
-    h3 {
-      display: inline;
-    }
+.default {
+  .page-header {
+    padding: 10px 1em 0 1em;
+    position: static;
+    background: rgba($color-yellow, 1);
+    box-shadow: none;
+    margin-left: 4em;
+    display: inline-block;
+    width: auto;
   }
 }

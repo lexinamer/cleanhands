@@ -2,6 +2,7 @@
   background: $color-teal;
   color: $color-white;
   text-transform: uppercase;
+  border-radius: 0;
   font-weight: $fontweight-bold;
   font-size: 20px;
   text-decoration: none;
@@ -9,15 +10,42 @@
   box-shadow: $box-shadow;
   display: table;
   text-align: center;
-  min-width: 225px;
+  min-width: 200px;
   clip-path: polygon(4% 0%, 100% 0%, 96% 100%, 0% 100%);
   -webkit-clip-path: polygon(4% 0%, 100% 0%, 96% 100%, 0% 100%);
   margin-top: 1em;
   transition: background .5s;
 
   &:hover {
-    background: $color-teal-dark;
+    background: darken($color-teal, 25%);
     color: $color-white;
     box-shadow: none;
   }
+}
+
+.fl-button, .bb_boot_card_link_button {
+  @extend .btn;
+  padding-top: 16px !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+
+  &:hover {
+    box-shadow: none !important;
+  }
+
+  .fl-button-text, .bb_boot_button {
+    font-weight: $fontweight-bold;
+    font-size: 20px;
+    line-height: 20px !important;
+  }
+}
+
+/*Change default button background color*/
+.fl-builder-content .fl-node-content a.fl-button {
+  background: $color-teal;
+}
+/*Change default button text color*/
+.fl-builder-content .fl-node-content a.fl-button span,
+.bb_boot_card_link_button .bb_boot_button {
+  color: $color-white;
 }

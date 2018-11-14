@@ -1,5 +1,6 @@
 .site-footer {
-  padding: 1em 4em;
+  // padding: 1em 4em;
+  padding-bottom: 0;
   border-bottom: 10px solid $color-yellow;
 }
 
@@ -8,8 +9,6 @@
   justify-content: space-between;
 
   .footer-col {
-    // flex: 1;
-
     .widget-title {
       margin: 5px 0;
       padding: 0;
@@ -31,6 +30,7 @@
 
       a {
         @extend h3;
+        color: $color-dark-blue;
         line-height: 2em;
 
         &:hover {
@@ -38,6 +38,30 @@
           box-shadow: inset 0 -4px 0 $color-blue;
         }
       }
+    }
+  }
+}
+
+.footer-info {
+  margin-top: 1.5em;
+  margin-bottom: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  p, a {
+    margin: 0;
+    font-size: 15px;
+  }
+
+  #social-menu {
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: inline-block;
+      margin-right: .3em;
     }
   }
 }
